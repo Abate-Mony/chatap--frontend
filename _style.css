@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-weight: 800;
+    background-color: rgb(5, 5, 46);
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 2px gray;
+}
+
+.head-container,
+.head-container-chatsbox {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+    align-items: center;
+    padding: 1rem;
+    top: 0px;
+    height: 10vh;
+    background-color: rgb(5, 5, 46);
+    box-shadow: 0px 2px 1px rgb(5, 5, 46);
+}
+
+.head-container,
+.head-container-chatsbox,
+.message-box {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+}
+
+.input-container {
+    position: fixed;
+    background-color: rgb(5, 5, 46);
+    width: 100%;
+    bottom: 00px;
+    align-items: center;
+    height: 10vh;
+    text-align: center;
+    display: grid;
+    z-index: 2000;
+    grid-template-columns: 10% 75% 15%;
+}
+
+.input-container input {
+    height: 5vh;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(5, 5, 46);
+    font-size: 1rem;
+    padding-left: 5px;
+    font-weight: 500;
+    color: white;
+}
+
+.input-container input::placeholder {
+    padding-left: 5px;
+    font-weight: 500;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding: 1rem;
+    color: red;
+}
+
+.close-btn:hover {
+    font-size: 1.5rem;
+    color: rgb(238, 170, 23);
+    transition: all 0.3 ease;
+}
+
+.message-container,
+.message-container-chats {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 10;
+    border-radius: 40px 40px 0px 0px;
+    overflow: auto;
+    /* border: 2px solid orange; */
+}
+
+
+/* .message-container {
+    overflow: hidden;
+    background-color: orange;
+    height: 10vh;
+    border: 10px solid green;
+} */
+
+.message-box img {
+    margin: 0 auto;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+.emj {
+    position: relative;
+    text-align: right;
+}
+
+.message-box {
+    color: black;
+    align-items: center;
+    padding: 0.3rem;
+    text-align: left;
+}
+
+.options div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* border: 1px solid gray; */
+    /* margin: 0 auto; */
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-weight: 200;
+}
+
+.add-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: rgb(5, 5, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+.chat {
+    padding: 0.5rem;
+    padding-left: 2.5rem;
+    position: relative;
+    width: 60%;
+    border-radius: 10px 10px 10px 0px;
+    background-color: rgb(5, 5, 46);
+    margin: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* padding: 0.5rem; */
+    box-shadow: 0px 0px 5px 1px gray;
+    word-break: break-all;
+}
+
+.chat img {
+    left: 0;
+    top: 0px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.send {
+    border-radius: 10px 10px 0px 10px;
+    padding: 0.5rem;
+    right: -38%;
+    background-color: white;
+    color: rgb(5, 5, 46);
+    box-shadow: 0px 0px 5px 1px rgb(5, 5, 46);
+}
+
+.contain {
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 20px;
+    width: 70vw;
+    background-color: rgb(5, 5, 46);
+    margin-top: 5vh;
+    margin-left: 15vw;
+    position: fixed;
+    top: 10vh;
+    height: 60vh;
+    overflow-y: scroll;
+    z-index: 100000;
+    padding: 1rem 2rem;
+}
+
+.contain li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2rem;
+    /* overflow-y: scroll; */
+}
+
+.contain p,
+.contain button {
+    background-color: #fff;
+    padding: 0.4rem;
+    color: black;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.contain p {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.8rem;
+}
+
+li:hover>button {
+    color: white;
+    background-color: rgb(131, 131, 185);
+    transition: all 0.2s ease;
+}
+
+li:hover>p {
+    color: white;
+    background-color: rgb(23, 23, 105);
+    transition: all 0.2s ease;
+}
+
+#id {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.form {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container,
+.signup-container {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 10px auto;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 20px;
+    row-gap: 10px;
+}
+
+.password,
+.number {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 10px;
+}
+
+.name:hover {
+    /* color: aqua; */
+    text-shadow: 1px 0px 1px black;
+}
+
+.login-container input,
+.signup-container input {
+    padding: 0.3rem;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.password-container {
+    display: flex;
+    gap: 0px;
+}
+
+.login-container button,
+.signup-container button {
+    width: 70%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-container button:hover,
+.signup-container button:hover {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* style for settings */
+
+.setting-container {
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.setting-container .setting-header,
+.profile-and-name {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border: 1px solid orange;
+}
+
+.setting-container .profile-and-name {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.setting-container .profile-and-name img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+
+/* end of styles for settings */
+
+
+/* media querys for small devices */
+
+@media screen and (max-width:445px) {
+    .message-box img {
+        height: 55px;
+        width: 55px;
+    }
+    .options div {
+        width: 30px;
+        height: 30px;
+    }
+    .password,
+    .number,
+    .name {
+        display: flex;
+        flex-direction: column;
+    }
+    .login-container,
+    .signup-container {
+        width: 80vw;
+    }
+    .contain {
+        width: 95vw;
+        margin-left: 2.5%;
+    }
+}
+
+
+/* media querys for bigger devices */
+
+@media screen and (min-width:800px) {
+    .main-container {
+        width: 60vw;
+        margin: 0 auto;
+    }
+    .password,
+    .number,
+    .name {
+        width: 70%;
+    }
+    .add-btn {
+        bottom: 20px;
+        right: 25%;
+    }
+    .input-container,
+    .head-container,
+    .head-container-chatsbox,
+    .contain {
+        width: 60vw;
+    }
+    .contain {
+        margin-left: 10vw;
+        width: 40vw;
+    }
+    .form {
+        width: 100%;
+        /* border: 10px solid orange; */
+        justify-content: left;
+    }
+    .chat {
+        font-size: 1.3rem;
+    }
+}

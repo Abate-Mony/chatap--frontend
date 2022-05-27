@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatapp</title>
+    <link rel="stylesheet" href="_style.css">
+    <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
+    <script src="./jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="form">
+            <div class="signup-container">
+                <div class="name"><span>NAME</span><input type="text" name="" id="signup_name"></div>
+                <div class="number"><span>number</span><input type="number" name="numner" id="signup_number"></div>
+                <div class="password"><span>password</span><input type="password" name="login-password" id="signup_password"></div>
+
+                <button class="create-account">CREATE ACCOUNT</button>
+                <button id="signup-login" style="padding: 0.2rem;">LOGIN</button>
+            </div>
+            <div class="login-container">
+                <h2>LOGIN</h2>
+                <div class="number"><span>NUMBER</span><input type="number" id="number" name="number"></div>
+                <div class="password"><span>PASSWORD </span><input type="password" name="password" id="password" placeholder="password here"></div>
+                <button id="login">LOGIN</button>
+                <button class="create-account">CREATE ACCOUNT</button>
+            </div>
+        </div>
+        <!-- start of home -->
+        <div class="home">
+            <div class="add-btn">
+                +
+            </div>
+            <div class="head-container">
+                <div class="setting">setting</div>
+                <div class="message">
+                    messages
+                </div>
+                <div class="name_of_user">
+                    name_of_user
+                </div>
+            </div>
+
+            <div class="message-container " style="height: 90vh;
+             margin-top: 10vh;overflow-y: auto; overflow-x: hidden;">
+            </div>
+        </div>
+        <!-- end of home -->
+        <div class="contain" style="overflow:auto;">
+            <div class="close-btn">X</div>
+            <h1 class="text-center">start conversation</h1>
+            <ol class="users" style="overflow:auto;">
+            </ol>
+        </div>
+        <!-- start of innerchat box -->
+        <div class="innerchats">
+            <div class="head-container-chatsbox" style="background-color: white;color:rgb(5, 5, 46);;">
+                <div id="back">👈</div>
+                <div class="name">
+                    name
+                </div>
+                <div class="search">
+                    call
+                </div>
+            </div>
+            <div class="message-container-chats" style="border-radius:0px 0px 20px 20px;
+    position: relative; 
+  
+padding-top:10vh;padding-bottom: 10vh;height:100vh">
+
+
+
+            </div>
+            <div class="input-container">
+                <div class="emj">😊</div>
+                <input type="text" id="input" placeholder="hey,press enter to send" style="outline: none;">
+                <div class="send_" style="color: orange;text-align: left;">
+                    send
+                </div>
+            </div>
+        </div>
+        <!-- end of innerchat box -->
+    </div>
+    <!-- </div> -->
+    <script src="_loginjs.js"></script>
+    <script src="_app.js"></script>
+    <script src="_createaccount.js"></script>
+
+
+</body>
+
+</html>
